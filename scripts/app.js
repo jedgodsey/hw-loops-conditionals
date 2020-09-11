@@ -124,85 +124,69 @@
 
 // ## Multiples of 3 and 5
 
-// _Yes, you might have tackled this earlier, but try it again (don't look back at your other code :eyes:)_
-
-// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-
-// Find the **sum** of all the multiples of 3 or 5 below 1000.
-let mySum = 0;
-for (let i = 1; i < 1000; i++) {
-    if (i % 15 === 0) {
-        mySum += i;
-    } else if (i % 3 === 0) {
-        mySum += i;
-    } else if (i % 5 === 0) {
-        mySum += i;
-    }
-}
-console.log(mySum);
-// :clap: You just solved [Project Euler](https://projecteuler.net/problem=1) problem 1! :clap:
-
-// >Tip: Get used to thinking about how to solve problems _now_. Will help immensely with coding challenges, and get your coding brain muscles nice and flexed for the class. Make a habit of going to Project Euler and taking a crack at the problems
-
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 9 - Project Euler Problem 1 answered"
-// <hr>
-
-// ---
-
+// let mySum = 0;
+// for (let i = 1; i < 1000; i++) {
+//     if (i % 15 === 0) {
+//         mySum += i;
+//     } else if (i % 3 === 0) {
+//         mySum += i;
+//     } else if (i % 5 === 0) {
+//         mySum += i;
+//     }
+// }
+// console.log(mySum);
 
 // # Hungry for more?
 
 // ## Triangles
 
 // 0. declare a variable `argument` and set it equal to 7.
+let argument = 8;
 
-// 1. Write a loop that console logs a "left isosceles" triangle (SEE BELOW) made of '#' that has the height and length of `argument`.
+let hashes = '';
+for (let i = 1; i <= argument; i++) {
+        hashes = hashes + '#';
+    console.log(hashes);
+}
 
-// >Ex: `argument` is 7
-
-// ```
-// #
-// ##
-// ###
-// ####
-// #####
-// ######
-// #######
-// ```
-
-// 2. Write a loop that console logs a "right isosceles" triangle (SEE BELOW) made of '#' that has the height and length of `argument`.  This is deceptively tricky. 
-
-// >Ex: `argument` is 7
-
-// ```
-//       #
-//      ##
-//     ###
-//    ####
-//   #####
-//  ######
-// #######
-// ```
+let grids = '';
+let spaces = ''
+for (let i = 1; i <= argument; i++) {
+    spaces = spaces + ' ';
+}
+spaces = spaces.split('');
+for (let i = 1; i <= argument; i++) {
+    spaces.pop();
+    closeSpaces = spaces.join('');
+    grids = grids + '#';
+    console.log(closeSpaces + grids);
+}
 
 
-// 3. Write a loop that console logs an "upside down left" isosceles triangle made of '#' that has the height and length of the argument.
+let pounds = '';
+for (let i = 1; i <= argument; i++) {
+    pounds = pounds + '#';
+}
+pounds = pounds.split('');
+for (let i = 1; i <= argument; i++) {
+    closePounds = pounds.join('');
+    pounds.pop();
+    console.log(closePounds);
+}
 
-// >Ex: `argument` is 7
 
-// ```
-// #######
-// ######
-// #####
-// ####
-// ###
-// ##
-// #
-// ```
-
-// 4. Write a loop that console logs an "upside down right" isosceles triangle made of '#' that has the height and length of the argument.  This is also tricky.
-
+let ticTacs = '';
+let gaps = '';
+for (let i = 1; i <= argument; i++) {
+    ticTacs = ticTacs + '#';
+}
+ticTacs = ticTacs.split('');
+for (let i = 1; i <= argument; i++) {
+    closeTicTacs = ticTacs.join('');
+    ticTacs.pop();
+    console.log(gaps + closeTicTacs);
+    gaps = gaps + ' ';
+}
 // >Ex: `argument` is 7
 
 // ```
