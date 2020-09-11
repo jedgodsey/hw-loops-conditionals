@@ -68,64 +68,59 @@
 
 // ## Return of the Closets
 
-const kristynsCloset = [
-  "left shoe",
-  "cowboy boots",
-  "right sock",
-  "GA hoodie",
-  "green pants",
-  "yellow knit hat",
-  "marshmallow peeps"
-];
+// const kristynsCloset = [
+//   "left shoe",
+//   "cowboy boots",
+//   "right sock",
+//   "GA hoodie",
+//   "green pants",
+//   "yellow knit hat",
+//   "marshmallow peeps"
+// ];
 
-const thomsCloset = [
-  [
-    // These are Thom's shirts
-    "grey button-up",
-    "dark grey button-up",
-    "light blue button-up",
-    "blue button-up",
-  ],[
-    // These are Thom's pants
-    "grey jeans",
-    "jeans",
-    "PJs"
-  ],[
-    // Thom's accessories
-    "wool mittens",
-    "wool scarf",
-    "raybans"
-  ]
-];
+// const thomsCloset = [
+//   [
+//     // These are Thom's shirts
+//     "grey button-up",
+//     "dark grey button-up",
+//     "light blue button-up",
+//     "blue button-up",
+//   ],[
+//     // These are Thom's pants
+//     "grey jeans",
+//     "jeans",
+//     "PJs"
+//   ],[
+//     // Thom's accessories
+//     "wool mittens",
+//     "wool scarf",
+//     "raybans"
+//   ]
+// ];
 
 
-// ### Alien Attire
-// 1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable `kristynsShoe`. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
-let kristynsShoe = kristynsCloset[0];
-thomsCloset[2].push(kristynsShoe);
-// ### Dress 'em Up
-// 1. Modify your code to put together **3 separate outfits** for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
-for (let i = 1; i <= 3; i++) {
-    let randomK = Math.floor(Math.random() * 4);
-    console.log(`For day ${i}, Kristyn will have her ${kristynsCloset[randomK]}, ${kristynsCloset[randomK + 1]} and ${kristynsCloset[randomK + 2]}.  Thom will have his ${thomsCloset[0][i - 1]}, ${thomsCloset[1][i -1]} and ${thomsCloset[2][i -1]}.`);
-}
+// // ### Alien Attire
+
+// let kristynsShoe = kristynsCloset[0];
+// thomsCloset[2].push(kristynsShoe);
+// // ### Dress 'em Up
+
+// for (let i = 1; i <= 3; i++) {
+//     let randomK = Math.floor(Math.random() * 4);
+//     console.log(`For day ${i}, Kristyn will have her ${kristynsCloset[randomK]}, ${kristynsCloset[randomK + 1]} and ${kristynsCloset[randomK + 2]}.  Thom will have his ${thomsCloset[0][i - 1]}, ${thomsCloset[1][i -1]} and ${thomsCloset[2][i -1]}.`);
+// }
 
 // ### Dirty Laundry
-// Continue looking at the closet arrays:
-// 1. Time to do laundry - loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
-for (let i = 0; i < kristynsCloset.length; i++) {
-    console.log(`WHIRR: Now washing ${kristynsCloset[i]}`);
-}
+
+// for (let i = 0; i < kristynsCloset.length; i++) {
+//     console.log(`WHIRR: Now washing ${kristynsCloset[i]}`);
+// }
 
 // ### Inventory
-// 2. Thom wants to do inventory on his closet. Using **bracket notation**, log the **arrays** (not the elements in the arrays) containing all of Thom's shirts, pants, and accessories.
-for (let i = 0; i < thomsCloset.length; i++) {
-    console.log(thomsCloset[i]);
-}
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 8 - I loops through their closets".
-// <hr>
+
+// for (let i = 0; i < thomsCloset.length; i++) {
+//     console.log(thomsCloset[i]);
+// }
 
 // ## Multiples of 3 and 5
 
@@ -134,7 +129,17 @@ for (let i = 0; i < thomsCloset.length; i++) {
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 // Find the **sum** of all the multiples of 3 or 5 below 1000.
-
+let mySum = 0;
+for (let i = 1; i < 1000; i++) {
+    if (i % 15 === 0) {
+        mySum += i;
+    } else if (i % 3 === 0) {
+        mySum += i;
+    } else if (i % 5 === 0) {
+        mySum += i;
+    }
+}
+console.log(mySum);
 // :clap: You just solved [Project Euler](https://projecteuler.net/problem=1) problem 1! :clap:
 
 // >Tip: Get used to thinking about how to solve problems _now_. Will help immensely with coding challenges, and get your coding brain muscles nice and flexed for the class. Make a habit of going to Project Euler and taking a crack at the problems
