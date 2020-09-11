@@ -18,16 +18,6 @@ for (let i = 1; i <= 20; i++) {
         console.log(catResponse[Math.floor(Math.random() * 3)]);
     }
 }
-// 2. For every **even** number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.
-
-// >Hint: You will need to use Math.random()
-
-// ![Image of cat with funny quote about dot](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRETGsssSXu2AS15GpQIBhuSgkhP2q_4JZcPopN4dFP-v85mAePGA)
-
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 3 - Excited Kittens answered"
-// <hr>
 
 // ## Fizz Buzz 
 
@@ -40,7 +30,10 @@ for (let i = 1; i <= 20; i++) {
 //   1. If a number is divisible by 5 log "Buzz" instead of the number.
   
 //   1. If a number is divisible by 3 and 5 log "FizzBuzz" instead of the number, "Fizz", or "Buzz".
-    
+
+for (let i = 1; i <= 100; i++) {
+    i % 3 === 0 ? (i % 5 === 0 ? console.log('FizzBuzz') : console.log('Fizz')) : i % 5 === 0 ? console.log('Buzz') : console.log(i);
+}
 // <hr>
 // &#x1F534; The commit message should read: <br>
 // "Commit 4 - Fizz Buzz answered"
