@@ -1,18 +1,15 @@
 // ## Easy Going
-// 1. Write a for loop that will log the numbers 1 through 20.
-for (let i = 1; i <= 20; i++) {
-    console.log(i);
-}
-// <hr>
-// &#x1F534; The commit message should read: <br>
+// for (let i = 1; i <= 20; i++) {
+//     console.log(i);
+// }
+
 // "Commit 1 - Easy Going answered"
-// <hr>
 
 // ## Get Even
 // 1. Write a `for` loop that will log only the even numbers in 0 through 200.
-// >Hint: Think about the increment expression.
-
-// <hr>
+for (let i = 2; i <= 200; i+=2) {
+    console.log(i);
+}
 // &#x1F534; The commit message should read: <br>
 // "Commit 2 - Get Even answered"
 // <hr>
