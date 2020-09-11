@@ -48,77 +48,68 @@
 // jimHaff.splice(2,1);
 
 // ## Yell at the Ninja Turtles
-// 1. Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
 
-// 2. Use a `for loop` to call `.toUpperCase()` on each of them and print out the result.
+// {
+//     let turtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
+// for (let i = 0; i < turtles.length; i++) {
+//     turtles[i] = turtles[i].toUpperCase();
+// }
+// console.log(turtles);
 
-// 3. Bonus: Modify the answer you just wrote. Instead of all letters being uppercase, make the letters alternate back and forth between uppercase and lowercase.
-{
-    let turtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
-for (let i = 0; i < turtles.length; i++) {
-    turtles[i] = turtles[i].toUpperCase();
-}
-console.log(turtles);
-
-for (let i = 0; i < turtles.length; i++) {
-    turtles[i] = turtles[i].split('');
-    for (let j = 0; j < turtles[i].length; j+=2) {
-        turtles[i][j] = turtles[i][j].toLowerCase();
-    }
-    turtles[i] = turtles[i].join('');
-}
-console.log(turtles);
-}
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 6 - Yell at the Ninja Turtles answered"
-// <hr>
-
+// for (let i = 0; i < turtles.length; i++) {
+//     turtles[i] = turtles[i].split('');
+//     for (let j = 0; j < turtles[i].length; j+=2) {
+//         turtles[i][j] = turtles[i][j].toLowerCase();
+//     }
+//     turtles[i] = turtles[i].join('');
+// }
+// console.log(turtles);
+// }
 
 // ## Return of the Closets
 
-// Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript. Use this data to answer the following questions.
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
 
-// ```javascript
-// const kristynsCloset = [
-//   "left shoe",
-//   "cowboy boots",
-//   "right sock",
-//   "GA hoodie",
-//   "green pants",
-//   "yellow knit hat",
-//   "marshmallow peeps"
-// ];
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
 
-// // Thom's closet is more complicated. Check out this nested data structure!!
-// const thomsCloset = [
-//   [
-//     // These are Thom's shirts
-//     "grey button-up",
-//     "dark grey button-up",
-//     "light blue button-up",
-//     "blue button-up",
-//   ],[
-//     // These are Thom's pants
-//     "grey jeans",
-//     "jeans",
-//     "PJs"
-//   ],[
-//     // Thom's accessories
-//     "wool mittens",
-//     "wool scarf",
-//     "raybans"
-//   ]
-// ];
-// ```
 
 // ### Alien Attire
 // 1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable `kristynsShoe`. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
-
+let kristynsShoe = kristynsCloset[0];
+thomsCloset[2].push(kristynsShoe);
 // ### Dress 'em Up
 // 1. Modify your code to put together **3 separate outfits** for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+for (let i = 1; i <= 3; i++) {
+    let randomK = Math.floor(Math.random() * 4);
+    console.log(`For day ${i}, Kristyn will have her ${kristynsCloset[randomK]}, ${kristynsCloset[randomK + 1]} and ${kristynsCloset[randomK + 2]}.  Thom will have his ${thomsCloset[0][i - 1]}, ${thomsCloset[1][i -1]} and ${thomsCloset[2][i -1]}.`)
+}
 
-// <hr>
 // &#x1F534; The commit message should read: <br>
 // "Commit 7 - Kristyn and Thom have their outfits ready for class - array practice"
 // <hr>
