@@ -141,87 +141,62 @@
 // ## Triangles
 
 // 0. declare a variable `argument` and set it equal to 7.
-let argument = 8;
+// let argument = 8;
 
-let hashes = '';
-for (let i = 1; i <= argument; i++) {
-        hashes = hashes + '#';
-    console.log(hashes);
-}
+// let hashes = '';
+// for (let i = 1; i <= argument; i++) {
+//         hashes = hashes + '#';
+//     console.log(hashes);
+// }
 
-let grids = '';
-let spaces = ''
-for (let i = 1; i <= argument; i++) {
-    spaces = spaces + ' ';
-}
-spaces = spaces.split('');
-for (let i = 1; i <= argument; i++) {
-    spaces.pop();
-    closeSpaces = spaces.join('');
-    grids = grids + '#';
-    console.log(closeSpaces + grids);
-}
-
-
-let pounds = '';
-for (let i = 1; i <= argument; i++) {
-    pounds = pounds + '#';
-}
-pounds = pounds.split('');
-for (let i = 1; i <= argument; i++) {
-    closePounds = pounds.join('');
-    pounds.pop();
-    console.log(closePounds);
-}
+// let grids = '';
+// let spaces = ''
+// for (let i = 1; i <= argument; i++) {
+//     spaces = spaces + ' ';
+// }
+// spaces = spaces.split('');
+// for (let i = 1; i <= argument; i++) {
+//     spaces.pop();
+//     closeSpaces = spaces.join('');
+//     grids = grids + '#';
+//     console.log(closeSpaces + grids);
+// }
 
 
-let ticTacs = '';
-let gaps = '';
-for (let i = 1; i <= argument; i++) {
-    ticTacs = ticTacs + '#';
-}
-ticTacs = ticTacs.split('');
-for (let i = 1; i <= argument; i++) {
-    closeTicTacs = ticTacs.join('');
-    ticTacs.pop();
-    console.log(gaps + closeTicTacs);
-    gaps = gaps + ' ';
-}
-// >Ex: `argument` is 7
+// let pounds = '';
+// for (let i = 1; i <= argument; i++) {
+//     pounds = pounds + '#';
+// }
+// pounds = pounds.split('');
+// for (let i = 1; i <= argument; i++) {
+//     closePounds = pounds.join('');
+//     pounds.pop();
+//     console.log(closePounds);
+// }
 
-// ```
-// #######
-//  ######
-//   #####
-//    ####
-//     ###
-//      ##
-//       #
-// ```
 
-// 5. Change the value of `argument` and reload your code and marvel at how you just solved a challenging problem and feel proud of yourself.
-
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 10 - Triangles answered"
-// <hr>
+// let ticTacs = '';
+// let gaps = '';
+// for (let i = 1; i <= argument; i++) {
+//     ticTacs = ticTacs + '#';
+// }
+// ticTacs = ticTacs.split('');
+// for (let i = 1; i <= argument; i++) {
+//     closeTicTacs = ticTacs.join('');
+//     ticTacs.pop();
+//     console.log(gaps + closeTicTacs);
+//     gaps = gaps + ' ';
+// }
 
 // ## Find the Median
-// - Find the median number in the following `nums` array, then console.log that number.
-// - _hint_ this will likely involve breaking down the problem into a few steps
-// -  _hint_: Click "Details" below (don't read this unless you've been stuck for a while) 
-// <details>
-// if you check the length of the array / 2, you might get not get a whole number. In which case, look into `Math.floor( // something )`
-// </details>
 
-// ```javascript
-// const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18,12, 17, 12, 71, 18, 15, 12];
+const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18,12, 17, 12, 71, 18, 15, 12];
 
-// Expected output:
-// => 15
-// ```
-
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 11 - Find the Median answered"
-// <hr>
+let goodNums = nums.sort((a,b) => a-b);
+let myMedian = 0;
+if (goodNums.length % 2 === 0) {
+    myMedian = (goodNums[Math.floor(goodNums.length / 2)] + goodNums[Math.floor((goodNums.length - 1) / 2)]) /2;
+} else {
+    myMedian = goodNums[Math.floor(goodNums.length / 2)];
+}
+console.log(myMedian);
