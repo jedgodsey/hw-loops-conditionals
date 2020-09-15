@@ -27,25 +27,25 @@
 
 // ## Getting to Know You
 
-// const kenny = ["Kenny", 1000, "Austin"];
-// const jimHaff = ["Jim H", 16, "All cities"];
-// const reuben = ["Reuben", 22, "Durham"];
-// const jimClark = ["Jim C", 186, "LA"];
-// const ryan = ["Ryan", 65, "Denver"];
-// ```
+const kenny = ["Kenny", 1000, "Austin"];
+const jimHaff = ["Jim H", 16, "All cities"];
+const reuben = ["Reuben", 22, "Durham"];
+const jimClark = ["Jim C", 186, "LA"];
+const ryan = ["Ryan", 65, "Denver"];
+
 // 1. Jim Clark decides that Kenny can't be named "Kenny" anymore. Remove "Kenny" from the `kenny` array and replace it with "Gameboy".
-// kenny[0] = 'Gambeboy';
+kenny[0] = 'Gambeboy';
 // 2. Jim Clark just had his birthday; change jimClark's array to reflect him being a year older.  Don't just hard code `187`--pretend that you didn't already know that his age is 186, and write your code to just make him a year older than whatever age he was.
-// jimClark[1] += 1;
+jimClark[1] += 1;
 // 3. Ryan is Batman maybe. Or possibly Robin. Change Ryan's hometown from "Denver" to "Gotham City".
-// ryan[2] = 'Gotham City';
+ryan[2] = 'Gotham City';
 // 4. Reuben left Durham 5 years ago to come to Chicago. First, remove "Durham" from Reuben's array, and then add "Chicago". (Note: remove and then add is different from simply changing the value at that index.)
-// reuben.pop;
-// reuben.push('Chicago');
+reuben.splice(reuben.indexOf('Durham'), 1, 'Chicago');
+console.log(reuben);
 // 5. Jim Haff could be literally anywhere in the world. Remove "All cities" from his array, then pick any 3 cities you like, and add them to Jim's array. If you did it in 3 lines of code that's fine, but [see if you can do it in one line of code](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-// jimHaff.splice(2,1,'San Jose', 'Oakland', 'Santa Rosa');
+jimHaff.splice(2,1,'San Jose', 'Oakland', 'Santa Rosa');
 // 6. Bonus: Whoops! Jim Haff is actually only allowed to be in one of two cities.  Whatever the _first_ of the 3 cities for Jim Haff is now, remove it from the array using [`.splice()`](https://www.google.com/search?q=mdn+splice&oq=mdn+splice&aqs=chrome.0.0j69i60j0l4.1078j0j7&sourceid=chrome&ie=UTF-8)
-// jimHaff.splice(2,1);
+jimHaff.splice(2,1);
 
 // ## Yell at the Ninja Turtles
 
@@ -190,13 +190,13 @@
 
 // ## Find the Median
 
-const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18,12, 17, 12, 71, 18, 15, 12];
+// const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18,12, 17, 12, 71, 18, 15, 12];
 
-let goodNums = nums.sort((a,b) => a-b);
-let myMedian = 0;
-if (goodNums.length % 2 === 0) {
-    myMedian = (goodNums[Math.floor(goodNums.length / 2)] + goodNums[Math.floor((goodNums.length - 1) / 2)]) /2;
-} else {
-    myMedian = goodNums[Math.floor(goodNums.length / 2)];
-}
-console.log(myMedian);
+// let goodNums = nums.sort((a,b) => a-b);
+// let myMedian = 0;
+// if (goodNums.length % 2 === 0) {
+//     myMedian = (goodNums[Math.floor(goodNums.length / 2)] + goodNums[Math.floor((goodNums.length - 1) / 2)]) /2;
+// } else {
+//     myMedian = goodNums[Math.floor(goodNums.length / 2)];
+// }
+// console.log(myMedian);
